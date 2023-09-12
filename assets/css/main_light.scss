@@ -1,0 +1,20 @@
+---
+---
+
+@charset "utf-8";
+
+$link-color: #135A90;
+$footer-background-color: #135A90;
+
+@import "minimal-mistakes/skins/air"; // skin
+@import "minimal-mistakes"; // main partials
+
+a:visited,
+a:link,
+a:active {
+    text-decoration: none !important;
+}
+
+.archive__item-teaser {
+    margin-bottom: 80px;
+}

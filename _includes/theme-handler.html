@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main_light.css" id="themeCSS">
+
+<i class="fas fa-moon" id="toggleIcon" onclick="toggleTheme()"></i>
+
+<script>
+    const osDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+    let currentTheme = sessionStorage.getItem("theme");
+
+    // Define current theme based either on OS settings or User preferences
+    if (currentTheme == null)
+        if (osDarkMode.matches == true)
+            currentTheme = "dark";
+        else
+            currentTheme = "light";
+
+    function setTheme(theme) {
+        sessionStorage.setItem("theme", theme);
+        document.querySelector("#themeCSS").href = "{{ site.baseurl }}/assets/css/main_" + theme + ".css";
+        if (theme == "light")
+            document.getElementById("toggleIcon").classList.replace("fa-sun", "fa-moon");
+        else
+            document.getElementById("toggleIcon").classList.replace("fa-moon", "fa-sun");
+    }
+
+    // forceDarkMode:
+    //  true        System dark mode enabled
+    //  false       System light mode enabled
+    //  undefined   User interaction => #toggleIcon
+    function toggleTheme(forceDarkMode) {
+        if (forceDarkMode == true)
+            currentTheme = "dark";
+        else if (forceDarkMode == false)
+            currentTheme = "light";
+        else
+            currentTheme = currentTheme == "light" ? "dark" : "light"
+
+        setTheme(currentTheme);
+    }
+
+    osDarkMode.addListener((evt) => toggleTheme(evt.matches));
+
+    setTheme(currentTheme);
+</script>

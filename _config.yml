@@ -1,0 +1,86 @@
+# Jekyll Theme Settings
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Site Settings
+title: "YOUR BLOG NAME HERE"
+subtitle: "Awesome blog!"
+name: "YOUR NAME HERE"
+description: "This is the blog description!"
+locale: "en-US"
+breadcrumbs: true
+search: true
+
+# Site Author
+author:
+  name   : "Your Name"
+  bio: "Your Bio"
+  avatar : "https://avatars.githubusercontent.com/u/9919?s=110&v=4"
+  location: Localhost, GitHub
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/"
+
+# Social Sharing
+og_image: "https://avatars.githubusercontent.com/u/9919?s=110&v=4"
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: Europe/Paris
+atom_feed:
+  hide: true
+
+include:
+  - _pages
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      classes: wide
+      header:
+        teaser: "/assets/images/Mont-Blanc.webp"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      classes: wide
+      header:
+        overlay_image: "/assets/images/Mont-Blanc.webp"
+        overlay_filter: 0.3
+        actions:
+          - label: "❤️ Become a Sponsor"
+            url: "https://github.com/sponsors/"
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
