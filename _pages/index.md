@@ -4,9 +4,11 @@ permalink: /
 title: "Something Awesome!"
 ---
 
-## Hey, I'm Someone Important 😎
+## GitHub Page Template
 
-Here is something important that you want to share.
+A simple, clean, and responsive theme for your website or blog.
+
+GitHub: <https://github.com/monsieurborges/site-template>
 
 Watch out! This paragraph of text has been emphasized with the `{: .notice--success}` class.
 {: .notice--success}

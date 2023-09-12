@@ -3,10 +3,10 @@ markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 # Site Settings
-title: "YOUR BLOG NAME HERE"
-subtitle: "Awesome blog!"
-name: "YOUR NAME HERE"
-description: "This is the blog description!"
+title: "Site Template"
+subtitle: "Awesome Site Template"
+name: "Your Name"
+description: "Your website description!"
 locale: "en-US"
 breadcrumbs: true
 search: true

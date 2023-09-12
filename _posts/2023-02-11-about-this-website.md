@@ -1,6 +1,6 @@
 ---
-title: "What is this website about, exactly?"
-excerpt: "Discover more about this website."
+title: "Post example"
+excerpt: "Discover more about this site template."
 header:
   teaser: "/assets/images/iss-crossing-the-moon.webp"
 categories:
@@ -9,10 +9,7 @@ categories:
 
 ![ISS crossing the moon]({{ site.baseurl }}/assets/images/iss-crossing-the-moon.webp)
 
-Welcome to my personal space where I share my notes and things I learn on various topics:
-
-* Topic I
-* Topic II
+Template built on [Jekyll](https://jekyllrb.com) & [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
 
 [BTN-Primary](#){: .btn .btn--primary } [BTN-Success](#){: .btn .btn--success} [BTN-Danger](#){: .btn .btn--danger}
 
